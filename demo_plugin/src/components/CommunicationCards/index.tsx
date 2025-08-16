@@ -1,0 +1,1 @@
+export { CommunicationCards } from './CommunicationCards';
