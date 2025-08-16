@@ -3,7 +3,7 @@ import {
   useWonderKits,
   useWonderKitsConnected,
   useWonderKitsLoading 
-} from '@wonderkits/client/react';
+} from '@wonderkits/client';
 import { OperationTemplate } from '../../types';
 import { OperationHistory } from '../../components/OperationHistory';
 import { LogViewer } from '../../components/LogViewer';

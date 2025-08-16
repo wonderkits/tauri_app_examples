@@ -3,7 +3,7 @@ import {
   useWonderKits,
   useWonderKitsConnected,
   useWonderKitsLoading
-} from '@wonderkits/client/react';
+} from '@wonderkits/client';
 import { QueryResult } from '../../../types';
 import { SqlService } from '../../../services';
 

@@ -1,6 +1,5 @@
 import { useState, useCallback } from 'react';
-import { type DirEntry } from '@wonderkits/client';
-import { useWonderKits } from '@wonderkits/client/react';
+import { type DirEntry,useWonderKits } from '@wonderkits/client';
 import { FsOperation } from '../../../types';
 import { FsService } from '../../../services';
 

@@ -2,9 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import { createWujieApp } from "@wonderkits/client";
-import { initWonderKits } from "@wonderkits/client/react";
 import "./styles/index.css";
+import { initWonderKits,createWujieApp } from "@wonderkits/client";
 
 // 子应用渲染函数
 function renderApp() {

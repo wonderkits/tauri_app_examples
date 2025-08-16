@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { useWonderKitsClient, useWonderKits } from '@wonderkits/client/react';
+import { useWonderKitsClient, useWonderKits } from '@wonderkits/client';
 import { StoreOperation } from '../../../types';
 import { StoreService } from '../../../services';
 
