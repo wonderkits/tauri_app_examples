@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import {name as pkgName} from '../../../package.json';
 
 interface NavItem {
   path: string;
@@ -7,8 +8,10 @@ interface NavItem {
   style?: React.CSSProperties;
 }
 
-const navItems: NavItem[] = [
-  { path: '/', label: '首页', icon: '🏠' },
+const BASE_PREFIX = `/${pkgName}`;
+
+const baseNavItems: NavItem[] = [
+  { path: '', label: '首页', icon: '🏠' },
   { path: '/about', label: '关于', icon: 'ℹ️' },
   { path: '/features', label: '功能', icon: '⚡' },
   { 
@@ -44,6 +47,11 @@ const navItems: NavItem[] = [
     }
   }
 ];
+
+const navItems: NavItem[] = baseNavItems.map(item => ({
+  ...item,
+  path: item.path === '' ? BASE_PREFIX : `${BASE_PREFIX}${item.path}`
+}));
 
 export const Navigation = () => {
   const location = useLocation();

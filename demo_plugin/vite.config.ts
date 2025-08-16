@@ -2,13 +2,16 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import Pages from 'vite-plugin-pages'
 import tailwindcss from '@tailwindcss/vite'
+import pkg from './package.json'
 
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
     Pages({
-      dirs: 'src/pages',
+      dirs: [
+        { dir: 'src/pages', baseRoute: pkg.name }
+      ],
       extensions: ['tsx'],
       exclude: ['**/components/**/*', '**/hooks/**/*'],
       importMode: 'async'
