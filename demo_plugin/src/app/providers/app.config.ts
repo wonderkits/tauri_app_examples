@@ -30,10 +30,6 @@ export const demoAppConfig: AppConfig = {
     order: 99,
     visible: true,
   },
-
-  // 移除静态路由配置，改为动态路由注册
-  routes: [],
-
   hooks: {
     async onInstall() {
       console.log("Wujie Demo应用正在安装...");
