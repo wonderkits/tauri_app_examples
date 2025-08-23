@@ -1,15 +1,15 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import App from "./App";
-import "./styles/index.css";
-import { initWonderKits,createWujieApp } from "@wonderkits/client";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './styles/index.css';
+import { initWonderKits, createWujieApp } from '@wonderkits/client';
 
 // 子应用渲染函数
 function renderApp() {
-  const container = document.getElementById("root");
+  const container = document.getElementById('root');
   if (!container) {
-    console.error("未找到根容器元素");
+    console.error('未找到根容器元素');
     return;
   }
 
@@ -21,9 +21,6 @@ function renderApp() {
       </BrowserRouter>
     </StrictMode>
   );
-
-  // WonderKits 初始化现在在组件中进行
-
   return root;
 }
 
@@ -37,17 +34,22 @@ function destroyApp(root?: any) {
 const init = async () => {
   try {
     await initWonderKits({
-      enableFs: true,
-      enableStore: true,
-      enableSql: true,
-      storeFilename: "demo-settings.json",
-      sqlConnectionString: "sqlite:test.db",
+      services: {
+        fs: true,
+        appRegistry: true,
+        store: {
+          filename: 'demo-settings.json',
+        },
+        sql: {
+          connectionString: 'sqlite:test.db',
+        },
+      },
       httpPort: 1421,
-      httpHost: "localhost",  
+      httpHost: 'localhost',
       verbose: true,
     });
   } catch (error) {
-    console.error("WonderKits 初始化失败:", error);
+    console.error('WonderKits 初始化失败:', error);
   }
 };
 
