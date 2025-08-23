@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './styles/index.css';
-import { initWonderKits, createWujieApp } from '@wonderkits/client';
+import { initWonderKits, createWujieApp, getAppRegistry } from '@wonderkits/client';
 
 // 子应用渲染函数
 function renderApp() {
@@ -48,6 +48,8 @@ const init = async () => {
       httpHost: 'localhost',
       verbose: true,
     });
+    const apps = await getAppRegistry().getApps();
+    console.log('WonderKits 初始化成功', apps);
   } catch (error) {
     console.error('WonderKits 初始化失败:', error);
   }
