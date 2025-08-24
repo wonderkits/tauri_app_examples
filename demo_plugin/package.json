@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite --port 3001 --host",
     "build": "tsc && vite build",
-    "preview": "vite preview --port 3001"
+    "preview": "vite preview --port 3001",
+    "package": "node build-package.js",
+    "package:clean": "npm run package"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -23,6 +25,7 @@
     "@types/react": "19.1.9",
     "@types/react-dom": "19.1.7",
     "@vitejs/plugin-react": "5.0.0",
+    "archiver": "^7.0.0",
     "typescript": "5.9.2",
     "vite": "7.1.1",
     "vite-plugin-pages": "^0.33.1"

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 
 import { OperationTemplate } from '../../types';
 import { OperationHistory } from '../../components/OperationHistory';

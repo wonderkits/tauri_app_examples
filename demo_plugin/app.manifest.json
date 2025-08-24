@@ -1,0 +1,35 @@
+{
+  "manifest": {
+    "id": "demo",
+    "name": "demo",
+    "displayName": "Wujie演示应用",
+    "version": "1.0.0",
+    "description": "演示Wujie微前端架构的功能和集成",
+    "author": "MagicTeam",
+    "category": "demo",
+    "type": "plugin",
+    "keywords": ["演示", "测试", "Wujie", "微前端"]
+  },
+  "navigation": {
+    "name": "Wujie演示",
+    "href": "/demo",
+    "matchPath": "/demo",
+    "icon": "BeakerIcon",
+    "current": false,
+    "order": 99,
+    "visible": true
+  },
+  "wujie": {
+    "sync": true,
+    "alive": true,
+    "sandbox": true,
+    "props": {
+      "appId": "demo",
+      "parentAppName": "magicteam"
+    }
+  },
+  "requirements": {
+    "minPlatformVersion": "1.0.0",
+    "dependencies": []
+  }
+}

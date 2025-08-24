@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 
 import { QueryResult } from '../../../types';
 import { SqlService } from '../../../services';

@@ -2,7 +2,6 @@ import { useEffect, useMemo } from 'react';
 
 import { OperationTemplate } from '../../types';
 import { OperationHistory } from '../../components/OperationHistory';
-import { LogViewer } from '../../components/LogViewer';
 import { FsService } from '../../services';
 import { getLayout } from '../../layouts';
 import {
